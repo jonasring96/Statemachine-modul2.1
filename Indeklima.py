@@ -67,7 +67,7 @@ if __name__ == '__main__':
             sleep(.5)
             
             temp+= 1
-            #print(temp)
+            print(temp)
             
 #-----------------------------------------------------------------------------------------
 #Funktion som opfanger alle data fra BME680
