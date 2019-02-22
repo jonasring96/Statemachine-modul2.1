@@ -2,30 +2,49 @@ from random import random
 from gpiozero import LED
 from time import sleep
 
-led1=LED(13)
-led2=LED(12)
-led3=LED(5)
-
+greenwe=LED(26)
+gulwe=LED(19)
+redwe=LED(13)
+redns=LED(21)
+gulns=LED(20)
+greenns=LED(16)
+     
 def state0():
     print ("Grøn! Kør")
-    led1.off()
+    greenwe.on()
+    redns.on()
     sleep(5.5)
-    led1.on()
+    greenwe.off()
+    redns.off()
     return state1
 
 def state1():
     print ("Gul! stop")
-    led2.on()
+    gulwe.on()
+    gulns.on()
     sleep(6.5)
-    led2.off()
+    gulwe.off()
+    gulns.off()
     return state2
 
 def state2():
     print ("Rød! stop")
-    led3.on()
+    redwe.on()
+    greenns.on()
     sleep(6.5)
-    led3.off()
+    redwe.off()
+    greenns.off()
+    return state3
+
+def state3():
+    print("Gul! stop")
+    gulwe.on()
+    gulns.on()
+    sleep(2)
+    gulwe.off()
+    gulns.off()
     return state0
+    
 
 
 state=state0    # initial state
