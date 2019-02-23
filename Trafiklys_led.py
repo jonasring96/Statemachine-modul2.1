@@ -5,9 +5,9 @@ from time import sleep
 greenwe=LED(26)
 gulwe=LED(19)
 redwe=LED(13)
-redns=LED(21)
-gulns=LED(20)
-greenns=LED(16)
+redns=LED(6)
+gulns=LED(5)
+greenns=LED(0)
      
 def state0():
     print ("Grøn! Kør")
