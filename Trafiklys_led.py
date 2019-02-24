@@ -10,28 +10,34 @@ gulns=LED(5)
 greenns=LED(0)
      
 def state0():
-    print ("Grøn! Kør")
+    print ("Kør vest øst")
+    print ("Stop nord syd")
     greenwe.on()
     redns.on()
     sleep(5.5)
-    greenwe.off()
+    gulwe.on()
+    sleep(1)
     redns.off()
+    greenwe.off()
     return state1
 
 def state1():
     print ("Gul! stop")
     gulwe.on()
     gulns.on()
-    sleep(6.5)
+    sleep(2)
     gulwe.off()
     gulns.off()
     return state2
 
 def state2():
-    print ("Rød! stop")
+    print ("Køre nord syd")
+    print ("Stop vest øst")
     redwe.on()
     greenns.on()
     sleep(6.5)
+    gulns.on()
+    sleep(1)
     redwe.off()
     greenns.off()
     return state3
