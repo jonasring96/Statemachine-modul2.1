@@ -16,6 +16,9 @@ def Gange(x,y):
     return resultat
 
 def Divider(x,y):
+    if y==0:
+        print("Kan ikke lade sig gøre, der divideres med 0!!")
+        return
     resultat=x/y
     return resultat
 
