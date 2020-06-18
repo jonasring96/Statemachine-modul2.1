@@ -1,5 +1,5 @@
 #Regnemaskine
-#Menutal=0
+Menutal=0
 #tal1=0
 #tal2=0
 
@@ -23,10 +23,15 @@ def Divider(x,y):
     return resultat
 
 def menu():
+    global Menutal
     print("Tast 1(+), 2(-), 3(*), 4(/), 5(slut)")
+    Menutal = int(input("tast tal nu!!"))
+    if Menutal <0 or Menutal>5:
+        print("Dit indtast er forkert!!")
+        menu()
 
 menu()
-Menutal = int(input("tast tal nu!!"))
+
 
 while Menutal==1:
     print("Nu skal der lægges sammen(+)!")
@@ -35,7 +40,7 @@ while Menutal==1:
     print("Resultatet af",tal1,"+",tal2,"=",Plus(tal1, tal2))
     print()
     menu()
-    Menutal = int(input("tast tal nu!!"))
+
 
 while Menutal==2:
     print("Nu skal der  trækkes fra(-)!")
@@ -44,7 +49,7 @@ while Menutal==2:
     print("Resultatet af",tal1,"-",tal2,"=",Minus(tal1, tal2))
     print()
     menu()
-    Menutal = int(input("tast tal nu!!"))
+
 
 while Menutal==3:
     print("Nu skal der ganges(*)!")
@@ -53,7 +58,7 @@ while Menutal==3:
     print("Resultatet af",tal1,"*",tal2,"=",Gange(tal1, tal2))
     print()
     menu()
-    Menutal = int(input("tast tal nu!!"))
+
 
 while Menutal==4:
     print("Nu skal der dividers(/)!")
@@ -62,7 +67,7 @@ while Menutal==4:
     print("Resultatet af",tal1,"/",tal2,"=",Divider(tal1, tal2))
     print()
     menu()
-    Menutal = int(input("tast tal nu!!"))
+
 
 
 while Menutal==5:
