@@ -1,4 +1,5 @@
-﻿from gpiozero import LED
+﻿#Virker kun på en raspberry PI
+from gpiozero import LED
 from DesignSpark.Pmod.HAT import createPmod
 import RPi.GPIO as GPIO
 from time import *
