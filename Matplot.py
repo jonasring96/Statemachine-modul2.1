@@ -24,7 +24,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Create the maptlotlib FigureCanvas object,
         # which defines a single set of axes as self.axes.
         sc = MplCanvas(self, width=5, height=4, dpi=100)
-        sc.axes.plot([0,1,2,3,4], [10,1,20,3,40])
+        sc.axes.plot([0,1,2,3,4,5,6,7,8,9,10], [10,12,20,13,40,45,23,55,12,66,74])
         self.setCentralWidget(sc)
 
         self.show()
